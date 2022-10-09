@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahansal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 22:44:20 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/08 22:50:58 by mahansal         ###   ########.fr       */
+/*   Created: 2022/10/07 23:35:49 by mahansal          #+#    #+#             */
+/*   Updated: 2022/10/07 23:38:46 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	return (0);
+	size_t length;
+	char *str;
+
+	length = 0;
+	str = s;
+	while (length < n)
+	{
+		str[length] = '\0';
+		length++;
+	}
+
 }
