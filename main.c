@@ -4,11 +4,11 @@
 
 int main(void)
 {
-	char dst1[4] = "";
-	char dst2[4] = "";
-	char src[] = "thx to ntoniolo for this test !";
-	printf("strlcat res: %zu\n", strlcat(NULL, src, 0));
-	printf("ft_strlcat res: %zu\n", ft_strlcat(NULL, src, 0));
+	char src[] = "test test";
+	char *dst1 = NULL;
+	char *dst2 = NULL;
+	printf("strlcat: %zu\n", strlcat(dst1, src, 0));
+	printf("ft_strlcat: %zu\n", ft_strlcat(dst2, src, 0));
 	printf("dst1: %s\n", dst1);
 	printf("dst2: %s\n", dst2);
 	return (0);
