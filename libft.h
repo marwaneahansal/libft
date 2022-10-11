@@ -1,3 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mahansal <mahansal@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/11 01:03:29 by mahansal          #+#    #+#             */
+/*   Updated: 2022/10/11 01:03:30 by mahansal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -18,6 +31,6 @@ int ft_toupper(int c);
 int ft_tolower(int c);
 char    *ft_strchr(const char *s, int c);
 char    *ft_strrchr(const char *s, int c);
-
+int ft_memcmp(const void *s1, const void *s2, size_t n);
 
 #endif

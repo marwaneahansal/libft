@@ -4,8 +4,9 @@
 
 int main(void)
 {
-	char src[] = "abbbbbbbb";
-	printf("strrchr: %s\n", strrchr(src, 'a'));
-	printf("ft_strrchr: %s\n", ft_strrchr(src, 'a'));
+	char s1[] = "abbbbbbbbd";
+	char s2[] = "abbbbbbbb";
+	printf("memcmp: %d\n", memcmp(s1, s2, sizeof(s1)));
+	printf("ft_memcmp: %d\n", ft_memcmp(s1, s2, sizeof(s1)));
 	return (0);
 }
