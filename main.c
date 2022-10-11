@@ -1,12 +1,16 @@
 #include "libft.h"
-#include <string.h>
+#include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
+
 
 int main(void)
 {
-	//char s1[] = "abcdefg";
-	char s1[] = "/|\x12\xff\x09\x42\2002\42|\\";
+	char src[10] = "Hello 1337";
+	char *dst1 = strdup(src);
+	char *dst2 = ft_strdup(src);
 
-	printf("memchr: %s\n", memchr(s1, '\200', 10));
-	printf("ft_memchr: %s\n", ft_memchr(s1, '\200', 10));
+	printf("dst1: %s\n", dst1);
+	printf("dst2: %s\n", dst2);
+	
 }
