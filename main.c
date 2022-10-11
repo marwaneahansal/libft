@@ -6,11 +6,8 @@
 
 int main(void)
 {
-	char src[10] = "Hello 1337";
-	char *dst1 = strdup(src);
-	char *dst2 = ft_strdup(src);
+	char str[] = "01234";
+	char *substring = ft_substr(str, 10, 10); 
 
-	printf("dst1: %s\n", dst1);
-	printf("dst2: %s\n", dst2);
-	
+	printf("%s\n", substring);
 }

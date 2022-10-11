@@ -6,7 +6,7 @@
 /*   By: mahansal <mahansal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 01:03:29 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/11 07:25:28 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/11 07:59:36 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,7 @@ char    *ft_strnstr(const char *hystack, const char *needle, size_t n);
 int ft_atoi(const char *str);
 void    *ft_calloc(size_t count, size_t size);
 char    *ft_strdup(const char *s1);
+
+char    *ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
