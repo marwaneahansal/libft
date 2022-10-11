@@ -6,7 +6,7 @@
 /*   By: mahansal <mahansal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 01:01:53 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/11 01:02:02 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/11 03:54:38 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
     while (index < n)
     {
         if ((unsigned char) str1[index] > (unsigned char) str2[index])
-            return (1);
+            return ( (unsigned char) str1[index] - (unsigned char) str2[index]);
         else if ((unsigned char) str1[index] < (unsigned char) str2[index])
-            return (-1);
+            return ( (unsigned char) str1[index] - (unsigned char) str2[index]);
         index++;
     }
     return (0);
