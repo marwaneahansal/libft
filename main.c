@@ -6,8 +6,8 @@
 
 int main(void)
 {
-	char str[] = "01234";
-	char *substring = ft_substr(str, 10, 10); 
-
-	printf("%s\n", substring);
+	char s1[] = "abcadba";
+	char s2[] = "acb";
+	char *result = ft_strjoin(s1, s2); 
+	printf("%s\n", result);
 }
