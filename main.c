@@ -6,11 +6,9 @@
 
 int main(void)
 {
-	// char s1[] = "   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !\n   \n \n \t\t\n  ";
-	// char set[] = " \n\t";
-	char *s1 = "  \t \t \n   \n\n\n\t";
-	char *set = " \n\t";
-	char *result = ft_strtrim(s1, set); 
+	int n = 0;
+	//int n = -2147483648;
+	char *result = ft_itoa(n); 
 
-	printf("%s\n", result);
+	printf("ft_itoi: %s\n", result);
 }

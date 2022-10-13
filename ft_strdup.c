@@ -6,18 +6,21 @@
 /*   By: mahansal <mahansal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 07:27:33 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/12 23:27:42 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/13 20:12:20 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 char    *ft_strdup(const char *s1)
 {
     char    *dst;
     int     index;
+    size_t  dst_len;
 
-    dst = (char *) malloc(sizeof(s1) + 1);
+    dst_len = ft_strlen(s1);
+    dst = (char *) malloc((dst_len * sizeof(char)) + 1);
     index = 0;
     if (dst == 0)
         return (0);
