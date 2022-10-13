@@ -6,7 +6,7 @@
 /*   By: mahansal <mahansal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 07:27:33 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/11 07:37:08 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/12 23:27:42 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char    *ft_strdup(const char *s1)
     char    *dst;
     int     index;
 
-    dst = (char *) malloc(sizeof(s1));
+    dst = (char *) malloc(sizeof(s1) + 1);
     index = 0;
     if (dst == 0)
         return (0);
