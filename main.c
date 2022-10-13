@@ -3,12 +3,18 @@
 #include <stdio.h>
 #include <string.h>
 
-
+char	strtoupper(unsigned int index, char c)
+{
+	(void) index;
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	return (c);
+}
 int main(void)
 {
-	int n = 0;
-	//int n = -2147483648;
-	char *result = ft_itoa(n); 
+	char *s = "hello";
+
+	char *result = ft_strmapi(s, strtoupper);
 
 	printf("ft_itoi: %s\n", result);
 }
