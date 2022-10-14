@@ -16,7 +16,8 @@ int main(void)
 	}
 	printf("write to the file fd => %d\n", Rfd);
 	char s[] = "Hello World!";
-	ft_putstr_fd(s, Rfd);
+	ft_putendl_fd(s, Rfd);
+	ft_putstr_fd("test new line", Rfd);
 	char str[] = "";
 	read(Wfd, str, 13);
 	printf("str: %s\n", str);
