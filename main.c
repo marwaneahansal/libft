@@ -3,18 +3,18 @@
 #include <stdio.h>
 #include <string.h>
 
-char	strtoupper(unsigned int index, char c)
+void	strtoupper(unsigned int index, char *c)
 {
 	(void) index;
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	return (c);
+	if (*c >= 97 && *c <= 122)
+		*c = *c - 32;
 }
+
 int main(void)
 {
-	char *s = "hello";
+	char s[] = "hEllo";
 
-	char *result = ft_strmapi(s, strtoupper);
+	ft_striteri(s, strtoupper);
 
-	printf("ft_itoi: %s\n", result);
+	printf("ft_itoi: %s\n", s);
 }
