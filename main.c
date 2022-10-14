@@ -6,8 +6,7 @@
 #include <unistd.h>
 int main(void)
 {
-	int Rfd = open("ft_putchar_fd_test.txt", O_WRONLY);
-	int Wfd = open("ft_putchar_fd_test.txt", O_RDONLY);
+	int Rfd = open("ft_putchar_fd_test.txt", 1);
 	// int Rfd = open("ft_putchar_fd_test.txt", 0);
 	if (Rfd == -1)
 	{
@@ -15,11 +14,7 @@ int main(void)
 		exit(1);
 	}
 	printf("write to the file fd => %d\n", Rfd);
-	char s[] = "Hello World!";
-	ft_putendl_fd(s, Rfd);
-	ft_putstr_fd("test new line", Rfd);
-	char str[] = "";
-	read(Wfd, str, 13);
-	printf("str: %s\n", str);
+	int n = 0;
+	ft_putnbr_fd(n, Rfd);
 	return (0);
 }
