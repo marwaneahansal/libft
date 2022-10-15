@@ -6,7 +6,7 @@
 /*   By: mahansal <mahansal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 01:03:06 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/11 01:03:08 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/15 22:35:38 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char    *ft_strrchr(const char *s, int c)
     index = ft_strlen(s);
     while (index >= 0)
     {
-        if (s[index] == c)
+        if (s[index] == (unsigned char) c)
             return ((char *) (s + index));
         index--;
     }

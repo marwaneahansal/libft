@@ -6,15 +6,11 @@
 #include <unistd.h>
 int main(void)
 {
-	int Rfd = open("ft_putchar_fd_test.txt", 1);
-	// int Rfd = open("ft_putchar_fd_test.txt", 0);
-	if (Rfd == -1)
-	{
-		printf("file not found\n");
-		exit(1);
+	char **res = ft_split("split  ||this|for|me|||||!|", '|');
+	int i = 0;
+	while(res[i]){
+		printf("res => %s \n", res[i]);
+		i++;
 	}
-	printf("write to the file fd => %d\n", Rfd);
-	int n = 0;
-	ft_putnbr_fd(n, Rfd);
 	return (0);
 }
