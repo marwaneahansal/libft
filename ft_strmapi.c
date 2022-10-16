@@ -6,7 +6,7 @@
 /*   By: mahansal <mahansal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 20:27:30 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/14 01:04:07 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/17 00:38:54 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     size_t  index;
     char    *str;
 
+    if (s == 0)
+        return (0);
     s_len = ft_strlen(s);
     index = 0;
     str = malloc(s_len * sizeof(char) + 1);

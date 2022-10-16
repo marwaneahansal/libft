@@ -6,7 +6,7 @@
 /*   By: mahansal <mahansal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 23:49:38 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/13 05:01:30 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/17 00:35:34 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ char    *ft_strtrim(char const *s1, char const *set)
     char    *trimmed_str;
     int     str_size;
 
+    if (s1 == 0)
+        return (0);
     s1_len = ft_strlen(s1);
     start_char_count = 0;
     end_char_count = 0;

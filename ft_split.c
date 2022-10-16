@@ -6,7 +6,7 @@
 /*   By: mahansal <mahansal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 19:58:19 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/16 00:42:30 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/17 00:41:01 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ char    **ft_split(char const *s, char c)
 
     index = 0;
     word_count = 0;
+    if (s == 0)
+        return (0);
     while (s[index] != '\0')
     {
         while (s[index] != '\0' && s[index] == c)

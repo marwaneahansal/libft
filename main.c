@@ -6,11 +6,6 @@
 #include <unistd.h>
 int main(void)
 {
-	char **res = ft_split("split  ||this|for|me|||||!|", '|');
-	int i = 0;
-	while(res[i]){
-		printf("res => %s \n", res[i]);
-		i++;
-	}
+	printf("%s\n", ft_strtrim("", ""));
 	return (0);
 }

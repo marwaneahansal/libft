@@ -6,7 +6,7 @@
 /*   By: mahansal <mahansal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 00:54:07 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/14 01:04:12 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/17 00:41:33 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@ void    ft_striteri(char *s, void (*f)(unsigned int, char *))
     size_t  index;
 
     index = 0;
-    while (s[index] != '\0')
+    if (s)
     {
-        f(index, &s[index]);
-        index++;
+        while (s[index] != '\0')
+        {
+            f(index, &s[index]);
+            index++;
+        }
     }
 }

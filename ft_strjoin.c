@@ -6,7 +6,7 @@
 /*   By: mahansal <mahansal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 23:03:07 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/12 23:26:39 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/17 00:35:08 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char    *ft_strjoin(char const *s1, char const *s2)
     size_t  s2_index;
     char    *joined_str;
 
+    if (s1 == 0 || s2 == 0)
+        return (0);
     s1_len = ft_strlen(s1);
     s2_len = ft_strlen(s2);
     s1_index = 0;
