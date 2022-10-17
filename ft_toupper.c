@@ -6,13 +6,13 @@
 /*   By: mahansal <mahansal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 01:03:23 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/11 01:03:24 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/17 03:51:17 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if (c >= 97 && c <= 122)
-        return (c - 32);
-    return (c);
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	return (c);
 }

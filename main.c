@@ -6,6 +6,6 @@
 #include <unistd.h>
 int main(void)
 {
-	printf("%s\n", ft_strtrim("", ""));
+	ft_putnbr_fd(-987441, 2);
 	return (0);
 }

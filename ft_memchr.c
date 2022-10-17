@@ -6,24 +6,24 @@
 /*   By: mahansal <mahansal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 03:19:30 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/11 03:50:26 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/17 03:43:41 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    size_t index;
-    char *str;
+	size_t	index;
+	char	*str;
 
-    index = 0;
-    str = (char *) s;
-    while (index < n)
-    {
-        if ((unsigned char) str[index] == (unsigned char) c)
-            return (str + index);
-        index++;
-    }
-    return (0);
+	index = 0;
+	str = (char *) s;
+	while (index < n)
+	{
+		if ((unsigned char) str[index] == (unsigned char) c)
+			return (str + index);
+		index++;
+	}
+	return (0);
 }
