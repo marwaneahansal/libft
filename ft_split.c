@@ -6,7 +6,7 @@
 /*   By: mahansal <mahansal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 19:58:19 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/17 04:08:05 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/20 23:22:58 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,19 @@ char	*get_word(char const *s, char c)
 	return (word);
 }
 
+void	free_strs(char **str, int len)
+{
+	int	index;
+
+	index = 0;
+	while (index < len)
+	{
+		free(str[index]);
+		index++;
+	}
+	free(str);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	index;
@@ -55,7 +68,7 @@ char	**ft_split(char const *s, char c)
 		while (s[index] != '\0' && s[index] != c)
 			index++;
 	}
-	str = malloc(word_count * sizeof(char *) + 1);
+	str = malloc(word_count * (sizeof(char *) + 1));
 	if (str == 0)
 		return (0);
 	index = 0;
@@ -67,6 +80,11 @@ char	**ft_split(char const *s, char c)
 		if (s[index] != '\0')
 		{
 			str[str_index] = get_word(s + index, c);
+			if (!str[str_index])
+			{
+				free_strs(str, str_index);
+				return (0);
+			}
 			str_index++;
 		}
 		while (s[index] != '\0' && s[index] != c)

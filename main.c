@@ -44,15 +44,15 @@ int main(void)
 	// printf("last list now ==> %s\n", (char *) ft_lstlast(fourthStruct)->content);
 
 	// t_list *head = 0;
-	// t_list *firstStruct = ft_lstnew("First Struct!");
-	// t_list *secondeStruct = ft_lstnew("Seconde Struct!");
-	// t_list *thirdStruct = ft_lstnew("Third Struct!");
-	// t_list *fourthStruct = ft_lstnew("Fourth Struct!");
-	// head = firstStruct;
-	// firstStruct->next = secondeStruct;
-	// secondeStruct->next = thirdStruct;
-	// thirdStruct->next = fourthStruct;
-	// fourthStruct->next = 0;
+	// // t_list *firstStruct = ft_lstnew("First Struct!");
+	// // t_list *secondeStruct = ft_lstnew("Seconde Struct!");
+	// // t_list *thirdStruct = ft_lstnew("Third Struct!");
+	// // t_list *fourthStruct = ft_lstnew("Fourth Struct!");
+	// // head = firstStruct;
+	// // firstStruct->next = secondeStruct;
+	// // secondeStruct->next = thirdStruct;
+	// // thirdStruct->next = fourthStruct;
+	// // fourthStruct->next = 0;
 	
 	// t_list *tmp_head = head;
 	// while (tmp_head)
@@ -82,11 +82,54 @@ int main(void)
 	// 	tmp_head = tmp_head->next;
 	// }
 
-	printf("-9        => %s\n", ft_itoa(-9));
-	printf("-8        => %s\n", ft_itoa(-8));
-	printf("109       => %s\n", ft_itoa(109));
-	printf("-12679712 => %s\n", ft_itoa(-12679712));
-	printf("0         => %s\n", ft_itoa(0));
+	// printf("-9        => %s\n", ft_itoa(-9));
+	// printf("-8        => %s\n", ft_itoa(-8));
+	// printf("109       => %s\n", ft_itoa(109));
+	// printf("-12679712 => %s\n", ft_itoa(-12679712));
+	// printf("0         => %s\n", ft_itoa(0));
+
+	// printf("Test 1 \n");
+	// char **test1 = ft_split("          ", ' ');
+	// int i = 0;
+	// printf("%s\n", *test1);
+	// while (test1[i] != 0)
+	// {
+	// 	printf("test1[%d] => %s\n", i, test1[i]);
+	// 	i++;
+	// }
+
+	// printf("\n\n");
+
+	// printf("Test 2 \n");
+	// char **test2 = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
+	// i = 0;
+	// while (test2[i] != 0)
+	// {
+	// 	printf("test2[%d] => %s\n", i, test2[i]);
+	// 	i++;
+	// }
+
+	// printf("\n\n");
+
+	// printf("Test 3 \n");
+	// char **test3 = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
+	// i = 0;
+	// while (test3[i] != 0)
+	// {
+	// 	printf("test3[%d] => %s\n", i, test3[i]);
+	// 	i++;
+	// }
+
+	// printf("\n\n");
+
+	// printf("Test 4 \n");
+	// char **test4 = ft_split("hello!", ' ');
+	// i = 0;
+	// while (test4[i] != 0)
+	// {
+	// 	printf("test4[%d] => %s\n", i, test4[i]);
+	// 	i++;
+	// }
 
 	return (0);
 }

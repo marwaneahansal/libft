@@ -6,7 +6,7 @@
 #    By: mahansal <mahansal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/05 23:30:06 by mahansal          #+#    #+#              #
-#    Updated: 2022/10/20 03:16:44 by mahansal         ###   ########.fr        #
+#    Updated: 2022/10/21 03:39:52 by mahansal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_strit
 
 OBJS 	= $(SRCS:.c=.o)
 
-BSRCS	= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c
+BSRCS	= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c
 
 BOBJS	= $(BSRCS:.c=.o)
 
