@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mahansal <mahansal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mahansal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 23:49:38 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/17 04:22:41 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/24 06:38:06 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,45 @@ int	check_set_char(char const *set, char c)
 	return (-1);
 }
 
+int	get_char_count(char const *s1, char const *set, int s1_len)
+{
+	int	index;
+	int	char_count;
+
+	index = 0;
+	char_count = 0;
+	if (s1_len == -1)
+	{
+		while (s1[index] != '\0' && check_set_char(set, s1[index]) == 1)
+		{
+			char_count++;
+			index++;
+		}
+	}
+	else
+	{
+		index = ft_strlen(s1) - 1;
+		while (s1[index] != '\0' && check_set_char(set, s1[index]) == 1)
+		{
+			char_count++;
+			index--;
+		}
+	}
+	return (char_count);
+}
+
+int	get_str_size(int s1_len, int start_char_count, int end_char_count)
+{
+	int	str_size;
+
+	str_size = 0;
+	if (s1_len - (start_char_count + end_char_count) < -1)
+		str_size = 1;
+	else
+		str_size = s1_len - (start_char_count + end_char_count);
+	return (str_size);
+}
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		index;
@@ -34,34 +73,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end_char_count;
 	int		s1_len;
 	char	*trimmed_str;
-	int		str_size;
 
-	if (s1 == 0)
+	if (s1 == 0 || set == 0)
 		return (0);
 	s1_len = ft_strlen(s1);
-	start_char_count = 0;
-	end_char_count = 0;
-	index = 0;
-	while (s1[index] != '\0' && check_set_char(set, s1[index]) == 1)
-	{
-		start_char_count++;
-		index++;
-	}
-	index = s1_len - 1;
-	while (s1[index] != '\0' && check_set_char(set, s1[index]) == 1)
-	{
-		end_char_count++;
-		index--;
-	}
-	if (s1_len - (start_char_count + end_char_count) < -1)
-	{
-		str_size = 1;
-	}
-	else
-	{
-		str_size = s1_len - (start_char_count + end_char_count);
-	}
-	trimmed_str = malloc((str_size + 1) * sizeof(char));
+	start_char_count = get_char_count(s1, set, -1);
+	end_char_count = get_char_count(s1, set, s1_len);
+	index = get_str_size(s1_len, start_char_count, end_char_count);
+	trimmed_str = malloc((index + 1) * sizeof(char));
 	if (trimmed_str == 0)
 		return (0);
 	index = 0;

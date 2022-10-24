@@ -31,5 +31,6 @@ void deleteNodeContent(void *str)
 
 int main(void)
 {
+	printf("%s\n", ft_strtrim("test", 0));
 	return (0);
 }
