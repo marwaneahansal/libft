@@ -6,7 +6,7 @@
 /*   By: mahansal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 19:58:19 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/23 03:48:47 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/24 07:18:58 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,29 +48,11 @@ void	free_strs(char **str, int len)
 	free(str);
 }
 
-char	**ft_split(char const *s, char c)
+char	**fill_str(char const *s, char c, char **str, size_t word_count)
 {
 	size_t	index;
-	size_t	word_count;
 	size_t	str_index;
-	char	**str;
 
-	index = 0;
-	word_count = 0;
-	if (s == 0)
-		return (0);
-	while (s[index] != '\0')
-	{
-		while (s[index] != '\0' && s[index] == c)
-			index++;
-		if (s[index] != '\0')
-			word_count++;
-		while (s[index] != '\0' && s[index] != c)
-			index++;
-	}
-	str = malloc((word_count + 1) * sizeof(char *));
-	if (str == 0)
-		return (0);
 	index = 0;
 	str_index = 0;
 	while (s[index] != '\0' && str_index < word_count)
@@ -91,5 +73,31 @@ char	**ft_split(char const *s, char c)
 			index++;
 	}
 	str[str_index] = 0;
+	return (str);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	size_t	index;
+	size_t	word_count;
+	char	**str;
+
+	index = 0;
+	word_count = 0;
+	if (s == 0)
+		return (0);
+	while (s[index] != '\0')
+	{
+		while (s[index] != '\0' && s[index] == c)
+			index++;
+		if (s[index] != '\0')
+			word_count++;
+		while (s[index] != '\0' && s[index] != c)
+			index++;
+	}
+	str = malloc((word_count + 1) * sizeof(char *));
+	if (str == 0)
+		return (0);
+	str = fill_str(s, c, str, word_count);
 	return (str);
 }
