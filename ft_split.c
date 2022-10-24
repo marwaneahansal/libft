@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mahansal <mahansal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mahansal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 19:58:19 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/20 23:22:58 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/23 03:48:47 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*get_word(char const *s, char c)
 	index = 0;
 	while (s[s_len] != '\0' && s[s_len] != c)
 		s_len++;
-	word = malloc(s_len * sizeof(char) + 1);
+	word = malloc(((s_len + 1) * sizeof(char)));
 	if (word == 0)
 		return (0);
 	while (index < s_len)
@@ -68,7 +68,7 @@ char	**ft_split(char const *s, char c)
 		while (s[index] != '\0' && s[index] != c)
 			index++;
 	}
-	str = malloc(word_count * (sizeof(char *) + 1));
+	str = malloc((word_count + 1) * sizeof(char *));
 	if (str == 0)
 		return (0);
 	index = 0;

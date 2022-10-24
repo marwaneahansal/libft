@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahansal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/13 20:27:30 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/22 06:18:21 by mahansal         ###   ########.fr       */
+/*   Created: 2022/10/21 04:24:04 by mahansal          #+#    #+#             */
+/*   Updated: 2022/10/23 00:57:24 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t	s_len;
-	size_t	index;
-	char	*str;
+	t_list	*head;
+	t_list	*tmp1;
+	t_list	*tmp2;
 
-	if (s == 0)
+	if (!lst)
 		return (0);
-	s_len = ft_strlen(s);
-	index = 0;
-	str = malloc((s_len * sizeof(char)) + 1);
-	if (str == 0)
+	head = ft_lstnew(f(lst->content));
+	if (!head)
 		return (0);
-	while (index < s_len)
+	tmp1 = lst->next;
+	while (tmp1)
 	{
-		str[index] = f(index, s[index]);
-		index++;
+		tmp2 = ft_lstnew(f(tmp1->content));
+		if (!tmp2)
+		{
+			ft_lstclear(&head, del);
+		}
+		ft_lstadd_back(&head, tmp2);
+		tmp1 = tmp1->next;
 	}
-	str[index] = '\0';
-	return (str);
+	return (head);
 }
