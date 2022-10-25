@@ -6,7 +6,7 @@
 /*   By: mahansal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 07:57:59 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/24 07:03:45 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/25 03:32:31 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t			s_len;
 
 	index = 0;
-	s_len = 0;
 	if (s == 0)
 		return (0);
 	s_len = ft_strlen(s);
