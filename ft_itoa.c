@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mahansal <mahansal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mahansal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 05:01:48 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/20 04:09:55 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/25 03:36:56 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	count_digits(int number)
 	return (digits_count);
 }
 
-char	*print_number(char *str, int sign, int digits_count, int number)
+char	*set_number(char *str, int sign, int digits_count, int number)
 {
 	int	index;
 
@@ -75,5 +75,5 @@ char	*ft_itoa(int n)
 	str = malloc((digits_count + sign + 1) * sizeof(char));
 	if (!str)
 		return (0);
-	return (print_number(str, sign, digits_count, number));
+	return (set_number(str, sign, digits_count, number));
 }

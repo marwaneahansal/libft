@@ -6,7 +6,7 @@
 /*   By: mahansal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 07:42:25 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/25 00:57:11 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/26 09:06:03 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@
 
 int	main(void)
 {
-	char *str = ft_calloc(SIZE_MAX, 0);
-	char *str2 = calloc(SIZE_MAX, 0);
-	printf("%s\n", str);
-	printf("%s\n", str2);
+	printf("ft_atoi %d\n", ft_atoi("9223372036854775806"));
+	printf("atoi %d\n", atoi("9223372036854775806"));
+
 	return (0);
 }
