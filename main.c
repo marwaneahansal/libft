@@ -6,7 +6,7 @@
 /*   By: mahansal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 07:42:25 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/27 02:55:48 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/27 03:04:22 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,10 @@
 
 int main()
 {
-	printf("%s\n", ft_strmapi("hello", 0));
+	t_list *s1 = ft_lstnew("s1");
+	t_list *s2 = ft_lstnew("s2");
+
+	ft_lstadd_front(&s1, s2);
+	t_list *last = ft_lstlast(s2);
+	printf("last content ==> %s\n", last->content);
 }

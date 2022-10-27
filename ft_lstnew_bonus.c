@@ -1,38 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahansal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/21 04:24:04 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/27 01:59:43 by mahansal         ###   ########.fr       */
+/*   Created: 2022/10/17 05:03:57 by mahansal          #+#    #+#             */
+/*   Updated: 2022/10/27 03:05:31 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstnew(void *content)
 {
-	t_list	*head;
-	t_list	*tmp1;
-	t_list	*tmp2;
+	t_list	*new_list;
 
-	if (!lst)
+	new_list = malloc(1 * sizeof(t_list));
+	if (new_list == 0)
 		return (0);
-	head = ft_lstnew(f(lst->content));
-	if (!head)
-		return (0);
-	tmp1 = lst->next;
-	while (tmp1)
-	{
-		tmp2 = ft_lstnew(f(tmp1->content));
-		if (!tmp2)
-		{
-			ft_lstclear(&head, del);
-		}
-		ft_lstadd_back(&head, tmp2);
-		tmp1 = tmp1->next;
-	}
-	return (head);
+	new_list->content = content;
+	new_list->next = 0;
+	return (new_list);
 }

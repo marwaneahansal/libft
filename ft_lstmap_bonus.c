@@ -1,23 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mahansal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/21 01:58:58 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/22 06:17:45 by mahansal         ###   ########.fr       */
+/*   Created: 2022/10/21 04:24:04 by mahansal          #+#    #+#             */
+/*   Updated: 2022/10/27 03:06:36 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	ft_lstdelone(t_list *lst, void (*del)(void*))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	if (del && lst)
+	t_list	*head;
+	t_list	*tmp1;
+	t_list	*tmp2;
+
+	if (!lst)
+		return (0);
+	head = ft_lstnew(f(lst->content));
+	if (!head)
+		return (0);
+	tmp1 = lst->next;
+	while (tmp1)
 	{
-		del(lst->content);
-		free(lst);
+		tmp2 = ft_lstnew(f(tmp1->content));
+		if (!tmp2)
+		{
+			ft_lstclear(&head, del);
+		}
+		ft_lstadd_back(&head, tmp2);
+		tmp1 = tmp1->next;
 	}
+	return (head);
 }
