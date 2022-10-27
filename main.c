@@ -6,7 +6,7 @@
 /*   By: mahansal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 07:42:25 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/26 09:06:03 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/27 02:25:15 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-int	main(void)
+int main()
 {
-	printf("ft_atoi %d\n", ft_atoi("9223372036854775806"));
-	printf("atoi %d\n", atoi("9223372036854775806"));
-
-	return (0);
+	printf("%c\n", (unsigned char) '\200');
 }

@@ -6,14 +6,16 @@
 /*   By: mahansal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 01:03:29 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/24 04:44:53 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/27 01:56:28 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-typedef unsigned long	size_t;
+# include <stdlib.h>
+# include <unistd.h>
+
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mahansal <mahansal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mahansal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 04:00:32 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/17 03:48:47 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/27 02:26:53 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check_needle(
+static int	check_needle(
 	const char *hystack,
 	const char *needle,
 	size_t n,
