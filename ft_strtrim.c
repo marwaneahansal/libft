@@ -6,14 +6,13 @@
 /*   By: mahansal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 23:49:38 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/24 06:38:06 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/27 02:51:08 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-int	check_set_char(char const *set, char c)
+static int	check_set_char(char const *set, char c)
 {
 	size_t	index;
 
@@ -27,7 +26,7 @@ int	check_set_char(char const *set, char c)
 	return (-1);
 }
 
-int	get_char_count(char const *s1, char const *set, int s1_len)
+static int	get_char_count(char const *s1, char const *set, int s1_len)
 {
 	int	index;
 	int	char_count;
@@ -54,7 +53,7 @@ int	get_char_count(char const *s1, char const *set, int s1_len)
 	return (char_count);
 }
 
-int	get_str_size(int s1_len, int start_char_count, int end_char_count)
+static int	get_str_size(int s1_len, int start_char_count, int end_char_count)
 {
 	int	str_size;
 

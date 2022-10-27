@@ -6,14 +6,15 @@
 /*   By: mahansal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 07:57:59 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/25 03:32:31 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/27 02:49:12 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-size_t	get_allocation_len(char const *s, unsigned int start, size_t len)
+static size_t	get_allocation_len(char const *s,
+									unsigned int start,
+									size_t len)
 {
 	size_t	tmp_len;
 	int		index;

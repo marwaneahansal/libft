@@ -6,14 +6,13 @@
 /*   By: mahansal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 05:01:48 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/25 03:36:56 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/27 02:53:54 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-int	count_digits(int number)
+static int	count_digits(int number)
 {
 	int	digits_count;
 
@@ -26,7 +25,7 @@ int	count_digits(int number)
 	return (digits_count);
 }
 
-char	*set_number(char *str, int sign, int digits_count, int number)
+static char	*set_number(char *str, int sign, int digits_count, int number)
 {
 	int	index;
 

@@ -6,14 +6,13 @@
 /*   By: mahansal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 23:03:07 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/24 07:41:43 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/27 02:50:26 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char	*join_str(char *joined_str, char const *s1, char const *s2)
+static char	*join_str(char *joined_str, char const *s1, char const *s2)
 {
 	size_t	s1_index;
 	size_t	s2_index;

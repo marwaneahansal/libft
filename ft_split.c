@@ -6,14 +6,13 @@
 /*   By: mahansal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 19:58:19 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/26 08:17:35 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/27 02:53:11 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char	*get_word(char const *s, char c)
+static char	*get_word(char const *s, char c)
 {
 	size_t	s_len;
 	char	*word;
@@ -35,7 +34,7 @@ char	*get_word(char const *s, char c)
 	return (word);
 }
 
-void	free_strs(char **str, int len)
+static void	free_strs(char **str, int len)
 {
 	int	index;
 
@@ -48,7 +47,7 @@ void	free_strs(char **str, int len)
 	free(str);
 }
 
-char	**fill_str(char const *s, char c, char **str, size_t word_count)
+static char	**fill_str(char const *s, char c, char **str, size_t word_count)
 {
 	size_t	index;
 	size_t	str_index;

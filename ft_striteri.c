@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mahansal <mahansal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mahansal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 00:54:07 by mahansal          #+#    #+#             */
-/*   Updated: 2022/10/17 04:45:08 by mahansal         ###   ########.fr       */
+/*   Updated: 2022/10/27 02:57:01 by mahansal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	size_t	index;
 
 	index = 0;
-	if (s)
+	if (s && f)
 	{
 		while (s[index] != '\0')
 		{
